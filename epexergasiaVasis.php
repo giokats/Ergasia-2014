@@ -36,10 +36,10 @@ var title=document.getElementById('titlos').value;
 var news=document.getElementById('eidisi').value;
 submitOK="true";
 if(title.length==0){
-alert("Παρακαλώ συμπληρώστε τον τίτλο.");
+alert("Ξ Ξ±ΟΞ±ΞΊΞ±Ξ»Ο ΟƒΟ…ΞΌΟ€Ξ»Ξ·ΟΟΟƒΟ„Ξµ Ο„ΞΏΞ½ Ο„Ξ―Ο„Ξ»ΞΏ.");
 submitOK="false";}
 if(news.length==0){
-alert("Παρακαλώ συμπληρώστε την είδηση.");
+alert("Ξ Ξ±ΟΞ±ΞΊΞ±Ξ»Ο ΟƒΟ…ΞΌΟ€Ξ»Ξ·ΟΟΟƒΟ„Ξµ Ο„Ξ·Ξ½ ΞµΞ―Ξ΄Ξ·ΟƒΞ·.");
 submitOK="false";}
 }
 
@@ -55,12 +55,12 @@ document.getElementById('eidisi').value="";
 
 </head>
 <body>
-<title>Επεξεργασία Βάσης</title>
-<h1 style="text-align:center;">Επεξεργασία Βάσης Δεδομένων News Corner</h1>
+<title>Ξ•Ο€ΞµΞΎΞµΟΞ³Ξ±ΟƒΞ―Ξ± Ξ’Ξ¬ΟƒΞ·Ο‚</title>
+<h1 style="text-align:center;">Ξ•Ο€ΞµΞΎΞµΟΞ³Ξ±ΟƒΞ―Ξ± Ξ’Ξ¬ΟƒΞ·Ο‚ Ξ”ΞµΞ΄ΞΏΞΌΞ­Ξ½Ο‰Ξ½ News Corner</h1>
 <br> 
 <br>
 <form>
-<h2>Επιλέξτε τίτλο για επεξεργασία/διαγραφή ή προσθέστε νέα είδηση: 
+<h2>Ξ•Ο€ΞΉΞ»Ξ­ΞΎΟ„Ξµ Ο„Ξ―Ο„Ξ»ΞΏ Ξ³ΞΉΞ± ΞµΟ€ΞµΞΎΞµΟΞ³Ξ±ΟƒΞ―Ξ±/Ξ΄ΞΉΞ±Ξ³ΟΞ±Ο†Ξ® Ξ® Ο€ΟΞΏΟƒΞΈΞ­ΟƒΟ„Ξµ Ξ½Ξ­Ξ± ΞµΞ―Ξ΄Ξ·ΟƒΞ·: 
 
 <select>
 <?php $query="SELECT titlos FROM eidiseis";
@@ -71,18 +71,18 @@ while($row = mysql_fetch_array($result)) { ?>
 
 </select> </h2>
 <br>
-<input type="button" value="Επιλογή" onClick="epilogi()">
-<input type="button" value="Διαγραφή">
-<input type="button" value="Νέα Είδηση" onclick="neaKataxwrisi()">
+<input type="button" value="Ξ•Ο€ΞΉΞ»ΞΏΞ³Ξ®" onClick="epilogi()">
+<input type="button" value="Ξ”ΞΉΞ±Ξ³ΟΞ±Ο†Ξ®">
+<input type="button" value="ΞΞ­Ξ± Ξ•Ξ―Ξ΄Ξ·ΟƒΞ·" onclick="neaKataxwrisi()">
 </form>
 <br>
 <br>
 
 <form id="new" style="visibility:hidden;" >
-Τίτλος: <textarea id="titlos"> </textarea><br>
-Είδηση: <textarea id="eidisi" rows="10" cols="40"> </textarea><br>
-<input type="button" name="ok" value="ΚΑΤΑΧΩΡΗΣΗ" onclick="validate()">
-<input type="button" name="cancel" value="ΑΚΥΡΩΣΗ" onClick="akyrwsh()">
+Ξ¤Ξ―Ο„Ξ»ΞΏΟ‚: <textarea id="titlos"> </textarea><br>
+Ξ•Ξ―Ξ΄Ξ·ΟƒΞ·: <textarea id="eidisi" rows="10" cols="40"> </textarea><br>
+<input type="button" name="ok" value="ΞΞ‘Ξ¤Ξ‘Ξ§Ξ©Ξ΅Ξ—Ξ£Ξ—" onclick="validate()">
+<input type="button" name="cancel" value="Ξ‘ΞΞ¥Ξ΅Ξ©Ξ£Ξ—" onClick="akyrwsh()">
 </form>
 </body>
 </html>
