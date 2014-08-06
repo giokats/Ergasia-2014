@@ -5,6 +5,9 @@
 
   if ($connection->connect_error) die($connection->connect_error);
 
+  //http://stackoverflow.com/questions/13433734/php-mysql-set-names-utf8-collate-utf8-unicode-ci-doesnt-work-with-mysqli-s
+  $connection->set_charset("utf8");
+
   //Γιατί βαριέμαι να γράφω πολλά καθε φορά και επειδή μπορώ ...
   function queryMysql($query)
   {
