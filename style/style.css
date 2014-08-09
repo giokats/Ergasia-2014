@@ -13,13 +13,15 @@ body
 }
 
 p
-{ margin: 0px;
+{ 
+  margin: 0px;
   padding: 0px 0px 16px 0px;
   line-height: 1.7em;
 }
 
 h1, h2, h3, h4
-{ font-family: tahoma, sans-serif;
+{ 
+  font-family: tahoma, sans-serif;
   font-size: 110%;
   letter-spacing: .1em;
   padding: 7px 0px 5px 0px; 
