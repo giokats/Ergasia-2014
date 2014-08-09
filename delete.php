@@ -1,14 +1,9 @@
 <?php // delete.php
-  
   require_once 'header.php' ;
-
 ?>
-  <section>
-
-    <div id="content">
 
 <?php 
-  
+  //Για την διαγραφή ενός άρθρου
   if (isset($_GET['post_id']) && $loggedin ) 
   {
     $id_title = sanitizeString($_GET['post_id']);
@@ -22,4 +17,4 @@
     echo "<p> Το άρθρο δεν μπορεί να διαγραφτεί </p>";
 ?>
 
-    </div>
+<?php require_once 'footer.html' ?>

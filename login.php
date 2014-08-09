@@ -1,6 +1,12 @@
 <?php // login.php
   require_once 'header.php';
-  echo "<div class='main'><h3>Please enter your details to log in</h3>";
+
+?>
+
+  <h2>Παρακαλώ εισάγετε το Username και το κωδικό σας </h2>
+
+<?php
+
   $error = $user = $pass = "";
 
   if (isset($_POST['user']))
@@ -8,8 +14,9 @@
     $user = sanitizeString($_POST['user']);
     $pass = sanitizeString($_POST['pass']);
     
+    //Έλεγχος αν έχουν συμπληρωθεί όλα τα πεδία
     if ($user == "" || $pass == "")
-        $error = "Not all fields were entered<br>";
+        $error = "<span class='error'>Πρέπει να συμπληρώσετε όλα τα πεδία </span><br><br>";
     else
     {
       $result = queryMySQL("SELECT user,pass FROM members
@@ -17,43 +24,34 @@
 
       if ($result->num_rows == 0)
       {
-        $error = "<span class='error'>Username/Password
-                  invalid</span><br><br>";
+        $error = "<span class='error'>Λάθος Username ή Password</span><br><br>";
       }
       else
       {
         $_SESSION['user'] = $user;
         $_SESSION['pass'] = $pass;
-        die("You are now logged in. Please <a href='index.php'>" .
-            "click here</a> to continue.<br><br>");
+
+        //Redirection to main page
+        header("Location:index.php");
+        exit();
       }
     }
   }
 
-  echo <<<_END
 
-  <section>
-
-    <form method='post' action='login.php'>$error
-    Username <input type='text'
-      maxlength='16' name='user' value='$user'><br>
-     Password <input type='password'
-      maxlength='16' name='pass' value='$pass'>
-
-
-
-
-_END;
 ?>
-    <br>
+
+  <form method='post' action='login.php'>
+    <?=$error?>
+    Username: <input type='text maxlength='16' name='user' value=<?= $user ?> ><br>
+    Password: <input type='password maxlength='16' name='pass' value=<?= $pass ?>><br>
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Login'>
-    </form><br></div>
-  </body>
+    </form>
+  <br>
 
-  <p>Δεν έχεις λογαριασμο;;; <a href='signup.php'>Δημιουργία τώρα ...</a></p>
+  <p>Δεν έχεις λογαριασμο;   <a href='signup.php'>Δημιουργία τώρα ...</a></p>
 
-  </section>
 
 <?php require_once 'footer.html' ?>
-</html>
+

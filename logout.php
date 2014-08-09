@@ -4,13 +4,11 @@
   if (isset($_SESSION['user']))
   {
     destroySession();
-    echo "<div class='main'>You have been logged out. Please " .
-         "<a href='index.php'>click here</a> to refresh the screen.";
+    echo "<div class='main'>Αποσυνδεθήκατε. Παρακαλώ πατήστε " .
+         "<a href='index.php'>εδώ</a>.";
   }
   else echo "<div class='main'><br>" .
-            "You cannot log out because you are not logged in";
+            "Δεν μπορείτε να αποσυνδεθείτε διότι δεν είστε συνδεδεμένος";
 ?>
 
-    <br><br></div>
-  </body>
-</html>
+<?php require_once 'footer.html' ?>

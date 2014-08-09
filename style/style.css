@@ -107,7 +107,7 @@ ol li
 }
 
 /* margin lefts / margin rights - to centre content */
-#main, #footer, #logo, #menubar, #site_content
+#main, footer, #logo, nav, #site_content
 { 
   margin-left: auto; 
   margin-right: auto;
@@ -136,7 +136,7 @@ ol li
 }
 
 /* navigation menu */
-#menubar
+nav
 { 
   width: 760px;
   height: 70px;
@@ -257,18 +257,18 @@ input.searchbutton
   font-size: 125%;
 }
 
-#content a, #footer a
+#content a, footer a
 {
   border-bottom: 1px dotted;
 }
 
-#content a:hover, #footer a:hover
+#content a:hover, footer a:hover
 {
   border-bottom: 1px solid;
 }
 
 /* footer */
-#footer
+footer
 { 
   width: 720px;
   height: 40px;
@@ -277,7 +277,7 @@ input.searchbutton
   text-align: center; 
 }
 
-#content a, #content a:hover, #footer a, #footer a:hover
+#content a, #content a:hover, footer a, footer a:hover
 {
   text-decoration: none;
 }

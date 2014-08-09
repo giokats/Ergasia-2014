@@ -10,12 +10,8 @@
   $row = $result->fetch_array(MYSQLI_ASSOC);
 ?>
 
-
-  <section>
-
-    <div id="content">
-      <h1><?= $row['title']?></h1>
-	<p> <?= $row['content'] ?></p>
+  <h1><?= $row['title']?></h1>
+  <p> <?= $row['content'] ?></p>
         
 <?php 
     if ($loggedin)
@@ -28,15 +24,6 @@
     }
 ?>
 
-
-    </div>
-
-
-  </section>
-
-  </div>
-
 <?php require_once 'footer.html' ?>
-</div>
-</body>
-</html>
+
+

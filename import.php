@@ -1,14 +1,9 @@
 <?php // import.php
-  
   require_once 'header.php' ;
-
 ?>
-  <section>
 
-    <div id="content">
 
 <?php 
-
 
   if (isset($_POST['title']) && $loggedin)
   {
@@ -26,6 +21,4 @@
     echo "<p> Το άρθρο δεν μπορεί να καταχωρηθεί </p>";
 ?>
 
-    </div>
-
-  </section>
+<?php require_once 'footer.html' ?>

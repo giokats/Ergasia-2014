@@ -8,9 +8,9 @@
 
     if ($result->num_rows)
       echo  "<span class='taken'>&nbsp;&#x2718; " .
-            "This username is taken</span>";
+            "Διαλέξτε άλλο Username</span>";
     else
       echo "<span class='available'>&nbsp;&#x2714; " .
-           "This username is available</span>";
+           "Το username μπορεί να χρησιμοποιηθεί</span>";
   }
 ?>

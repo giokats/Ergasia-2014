@@ -1,13 +1,8 @@
 <?php // create.php
-  
-  require_once 'header.php' ;
+    require_once 'header.php' ;
 ?>
 
-
-  <section>
-
-    <div id="content">
-
+     <!-- Φόρμα για την δημιουργία άρθρου-->
      <form method='post' action='import.php'>
         Tίτλος: <input name="title" id="title" type="text"/><br>
 
@@ -18,15 +13,11 @@
           <option id="science" value="science">Επιστήμη</option>
         </select><br>
 
-        <TEXTAREA name="content" 
-         ROWS="3" COLS="25">
+        <TEXTAREA name="content" ROWS="3" COLS="25">
          Γράψτε εδώ το κείμενο σας...
         </TEXTAREA>
         <input type='submit' value='Δημιουργία άρθρου'>
 
       </form>
 
-
-    </div>
-
-  </section>
+<?php require_once 'footer.html' ?>

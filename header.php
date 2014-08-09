@@ -1,5 +1,6 @@
 ﻿<?php // header.php
 
+  //checking if a user is logged in
   //http://php.net/manual/en/function.session-start.php
   session_start();
 
@@ -50,54 +51,58 @@
 
 <div id="main">
 
-    <header>
-      <div id="logo">
-        <h1>News Corner</h1>
-      </div>
 
-      <div id="menubar">
-        <ul id="menu">
-          <li><a "current" href="index.php">Αρχική</a></li>
-          <li><a href="index.php?post_category=general">Γενικά</a></li>
-          <li><a href="index.php?post_category=economy">Οικονομικά</a></li>
-          <li><a href="index.php?post_category=science">Επιστήμη</a></li>
-        </ul>
+  <header>
+    <div id="logo">
+      <h1>News Corner</h1>
+    </div>
+    
+    <nav>
+      <ul id="menu">
+        <li><a "current" href="index.php">Αρχική</a></li>
+        <li><a href="index.php?post_category=general">Γενικά</a></li>
+        <li><a href="index.php?post_category=economy">Οικονομικά</a></li>
+        <li><a href="index.php?post_category=science">Επιστήμη</a></li>
+      </ul>
      
-        <div id="search">  
-	  <div id="wra" style="font:10pt Arial; color:#FFFFFF;">
-	  </div>      
-	  <form method="get" action="http://www.google.com/">
-            <p>
-              <input class="searchfield" type="text" value="" />
-              <input class="searchbutton" name="submit" type="submit" value="search" />
-            </p>
-          </form>
-        </div>
+      <div id="search">  
+        <div id="wra" style="font:10pt Arial; color:#FFFFFF;">
+	</div>      
+	<form method="get" action="http://www.google.com/">
+          <p>
+            <input class="searchfield" type="text" value="" />
+            <input class="searchbutton" name="submit" type="submit" value="search" />
+          </p>
+        </form>
       </div>
-
-    </header>
-
     <nav>
 
-  <div id="site_content">
+  </header>
+
+
+  <div id="site_content"> <!-- τί περιλαμβάνει αυτό ???-->
+    <aside>
     <div class="sidebar">
       <div class="sidebaritem">
         <h3>Επιλογές</h3>
         <ul>
-	  <?php 
+        <?php 
           if ($loggedin)
- 	  {
-	    echo "<li><a href='logout.php'>Αποσύνδεση</a></li>";
+  	  {
+ 	    echo "<li><a href='logout.php'>Αποσύνδεση</a></li>";
     	  }
 	  else
   	  {
 	    echo "<li><a href='login.php'>Σύνδεση</a></li>";
           }
-?>          
+        ?>          
           <li><a href=" ">Σύνδεσμοι</a></li>
 	  <li><a href=" ">Επικοινωνία</a></li>
         </ul>
       </div>
     </div>
+    <aside>
 
-    <nav>
+    <article>
+    <div id="content">
+

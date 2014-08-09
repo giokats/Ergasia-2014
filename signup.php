@@ -1,7 +1,7 @@
 <?php // signup.php
   require_once 'header.php';
-
-  echo <<<_END
+?>
+  <!-- Από το βιβλίο Learning PHP, MySQL, JavaScript, CSS & HTML5: A Step-By-Step Guide to Creating Dynamic Websites-->
   <script>
     function checkUser(user)
     {
@@ -41,9 +41,10 @@
       return request
     }
   </script>
-  <div class='main'><h3>Please enter your details to sign up</h3>
-_END;
 
+  <h3>Εισάγετε τα στχοιεία σας</h3>
+
+<?php
   $error = $user = $pass = "";
   if (isset($_SESSION['user'])) destroySession();
 
@@ -63,24 +64,23 @@ _END;
       else
       {
         queryMysql("INSERT INTO members VALUES('$user', '$pass')");
-        die("<h4>Account created</h4>Please Log in.<br><br>");
+        //Redirection to main page
+        header("Location:login.php");
+        exit();
       }
     }
   }
 
-  echo <<<_END
-    <form method='post' action='signup.php'>$error
-    <span class='fieldname'>Username</span>
-    <input type='text' maxlength='16' name='user' value='$user'
-      onBlur='checkUser(this)'><span id='info'></span><br>
-    <span class='fieldname'>Password</span>
-    <input type='text' maxlength='16' name='pass'
-      value='$pass'><br>
-_END;
 ?>
-
+  <form method='post' action='signup.php'> 
+    <?= $error ?>
+    <span class='fieldname'>Username</span>
+    <input type='text' maxlength='16' name='user' value= '<?= $user ?>' onBlur='checkUser(this)'><span id='info'></span><br>
+    <span class='fieldname'>Password </span>    
+    <input type='text' maxlength='16' name='pass' value=' <?=$pass ?> '><br><br>
     <span class='fieldname'>&nbsp;</span>
-    <input type='submit' value='Sign up'>
-    </form></div><br>
-  </body>
-</html>
+    <input type='submit' value='Δημιουργία Λογαριασμού'>
+    </form>
+
+
+<?php require_once 'footer.html' ?>
