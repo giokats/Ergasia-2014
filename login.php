@@ -51,6 +51,8 @@ _END;
     </form><br></div>
   </body>
 
+  <p>Δεν έχεις λογαριασμο;;; <a href='signup.php'>Δημιουργία τώρα ...</a></p>
+
   </section>
 
 <?php require_once 'footer.html' ?>

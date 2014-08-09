@@ -57,10 +57,10 @@
 
       <div id="menubar">
         <ul id="menu">
-          <li><a class="current" href="index.html">Αρχική</a></li>
-          <li><a href="politika.html">Πολιτικά</a></li>
-          <li><a href="oikonomika.html">Οικονομικά</a></li>
-          <li><a href="athlitika.html">Αθλητικά</a></li>
+          <li><a "current" href="index.php">Αρχική</a></li>
+          <li><a href="index.php?post_category=general">Γενικά</a></li>
+          <li><a href="index.php?post_category=economy">Οικονομικά</a></li>
+          <li><a href="index.php?post_category=science">Επιστήμη</a></li>
         </ul>
      
         <div id="search">  
@@ -84,7 +84,16 @@
       <div class="sidebaritem">
         <h3>Επιλογές</h3>
         <ul>
-          <li><a class="current" href=" ">Εγγραφή</a></li>
+	  <?php 
+          if ($loggedin)
+ 	  {
+	    echo "<li><a href='logout.php'>Αποσύνδεση</a></li>";
+    	  }
+	  else
+  	  {
+	    echo "<li><a href='login.php'>Σύνδεση</a></li>";
+          }
+?>          
           <li><a href=" ">Σύνδεσμοι</a></li>
 	  <li><a href=" ">Επικοινωνία</a></li>
         </ul>

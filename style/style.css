@@ -311,3 +311,15 @@ textarea
   font-weight: bold;
 }
 
+
+
+.taken, .error {
+  color:red;
+}
+
+
+.available {
+  color:green;
+}
+
+
