@@ -97,7 +97,7 @@
           }
         ?>          
           <li><a href=" ">Σύνδεσμοι</a></li>
-	  <li><a href=" ">Επικοινωνία</a></li>
+	  <li><a href="mailto:anagnwstopoulos@hotmail.com">Επικοινωνία</a></li>
         </ul>
       </div>
     </div>
