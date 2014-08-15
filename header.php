@@ -68,9 +68,9 @@
       <div id="search">  
         <div id="wra" style="font:10pt Arial; color:#FFFFFF;">
 	</div>      
-	<form method="get" action="http://www.google.com/">
+	<form method="get" action="https://www.google.com/search">
           <p>
-            <input class="searchfield" type="text" value="" />
+            <input class="searchfield" type="text" name="q" maxlength="255" value="" />
             <input class="searchbutton" name="submit" type="submit" value="search" />
           </p>
         </form>
