@@ -89,7 +89,7 @@
         <?php 
           if ($loggedin)
   	  {
- 	    echo "<li><a href='logout.php'>Αποσύνδεση</a></li>";
+ 	    echo "<li><a href='logout.php'>Αποσύνδεση $userstr </a></li>";
     	  }
 	  else
   	  {
