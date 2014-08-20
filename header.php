@@ -65,13 +65,6 @@
         <li><a href="index.php?post_category=science">Επιστήμη</a></li>
       </ul>
      
-	 <audio controls autoplay>
-	 <source src="/music/Who Needs Foreverer.mp3">
-	<source src="/music/Who Needs Foreverer.ogg">
-	<source src="/music/Who Needs Foreverer.wav">
-	Your browser does not support the audio element.
-	</audio>
-	
       <div id="search">  
         <div id="wra" style="font:10pt Arial; color:#FFFFFF;">
 	</div>      
@@ -103,7 +96,7 @@
 	    echo "<li><a href='login.php'>Σύνδεση</a></li>";
           }
         ?>          
-          <li><a href=" ">Σύνδεσμοι</a></li>
+          <li><a href="links.php">Σύνδεσμοι</a></li>
 	  <li><a href="mailto:anagnwstopoulos@hotmail.com">Επικοινωνία</a></li>
         </ul>
       </div>
