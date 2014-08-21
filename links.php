@@ -5,7 +5,7 @@
 
 <h1>Χρήσιμοι σύνδεσμοί</h1>
      
-<a href="https://github.com/giokats/Ergasia-2014">Ο κώδικας της ιστοσελίδας</a>
+<a href="https://github.com/giokats/Ergasia-2014" target="_blank">Ο κώδικας της ιστοσελίδας</a>
 
 <br>
 <br>
