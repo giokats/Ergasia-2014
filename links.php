@@ -4,8 +4,15 @@
 
 
 <h1>Χρήσιμοι σύνδεσμοί</h1>
-     
-<a href="https://github.com/giokats/Ergasia-2014" target="_blank">Ο κώδικας της ιστοσελίδας</a>
+
+<br>
+
+<ul>     
+  <li><a href="https://github.com/giokats/Ergasia-2014" target="_blank">Ο κώδικας της ιστοσελίδας</a></li>
+  <li><a href="http://gunet2.cs.unipi.gr/eclass/" target="_blank">Gunet</a></li>
+  <li><a href="http://www.w3schools.com/" target="_blank">w3schools<a/></li>
+  <li><a href="http://www.in.gr/" target="_blank">in.gr<a/></li>
+</ul>
 
 <br>
 <br>
@@ -21,8 +28,6 @@ Your browser does not support the audio element.
 <br>
 <br>
 
-<a href="http://gunet2.cs.unipi.gr/eclass/">Gunet</a> <br>
-<a href="http://www.w3schools.com/">w3schools<a/><br>
-<a href="http://www.in.gr/">in.gr<a/>
+
 <?php require_once 'footer.html' ?>
 
