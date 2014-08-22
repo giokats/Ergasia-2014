@@ -18,7 +18,11 @@
 <source src="/music/Who Needs Foreverer.wav">
 Your browser does not support the audio element.
 </audio>
+<br>
+<br>
 
-
+<a href="http://gunet2.cs.unipi.gr/eclass/">Gunet</a> <br>
+<a href="http://www.w3schools.com/">w3schools<a/><br>
+<a href="http://www.in.gr/">in.gr<a/>
 <?php require_once 'footer.html' ?>
 
