@@ -77,7 +77,7 @@
     <span class='fieldname'>Username</span>
     <input type='text' maxlength='16' name='user' value= '<?= $user ?>' onBlur='checkUser(this)'><span id='info'></span><br>
     <span class='fieldname'>Password </span>    
-    <input type='text' maxlength='16' name='pass' value=' <?=$pass ?> '><br><br>
+    <input type='text' maxlength='16' name='pass' value='<?= $pass ?>'><br><br>
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Δημιουργία Λογαριασμού'>
     </form>
