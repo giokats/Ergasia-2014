@@ -1,4 +1,4 @@
-﻿<?php // header.php
+<?php // header.php
 
   //checking if a user is logged in
   //http://php.net/manual/en/function.session-start.php
@@ -59,7 +59,7 @@
     
     <nav>
       <ul id="menu">
-        <li><a "current" href="index.php">Αρχική</a></li>
+        <li><a href="index.php">Αρχική</a></li>
         <li><a href="index.php?post_category=general">Γενικά</a></li>
         <li><a href="index.php?post_category=economy">Οικονομικά</a></li>
         <li><a href="index.php?post_category=science">Επιστήμη</a></li>
@@ -75,7 +75,7 @@
           </p>
         </form>
       </div>
-    <nav>
+    </nav>
 
   </header>
 
@@ -101,7 +101,7 @@
         </ul>
       </div>
     </div>
-    <aside>
+    </aside>
 
     <article>
     <div id="content">

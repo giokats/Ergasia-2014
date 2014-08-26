@@ -2,6 +2,8 @@
     require_once 'header.php' ;
 ?>
 
+     <h2>Δημιουργία άρθρου</h2>
+
      <!-- Φόρμα για την δημιουργία άρθρου-->
      <form method='post' action='import.php'>
         Tίτλος: <input name="title" id="title" type="text"/><br>

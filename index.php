@@ -18,9 +18,21 @@
   {
     if (!isset($post_category))
     {
-      echo "<h1>Καλώς ήλθατε στην σελίδα μας</h1>";
+      echo "<h2>Καλώς ήλθατε στην σελίδα μας</h2>";
       echo "<p> Τα τελευταία νέα της επικαιρότητας:</p>";
-    }  
+    }
+    else if( $post_category =="general")
+    {
+      echo "<h2>Γενικά νέα</h2>";
+    }
+    else if( $post_category =="economy")
+    {
+      echo "<h2>Οικονομικά νέα</h2>";
+    }
+    else if( $post_category =="science")
+    {
+      echo "<h2>Επιστημονικά νέα</h2>";
+    }
     echo "<ul>";
       for ($j = 0 ; $j < $num ; ++$j)
       {
@@ -36,7 +48,7 @@
     }
     else
     {
-      echo "<h1>Δεν υπάρχουν άρθρα</h1>";
+      echo "<h2>Δεν υπάρχουν άρθρα</h2>";
     }
 
 ?>

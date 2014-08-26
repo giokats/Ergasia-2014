@@ -1,14 +1,16 @@
-<?php // Example 26-12: logout.php
+<?php //logout.php
   require_once 'header.php';
+?>
 
+<?php
   if (isset($_SESSION['user']))
   {
     destroySession();
-    echo "<div class='main'>Αποσυνδεθήκατε. Παρακαλώ πατήστε " .
-         "<a href='index.php'>εδώ</a>.";
+    echo "<h2>Αποσυνδεθήκατε. Παρακαλώ πατήστε ".
+         "<a href='index.php'>εδώ</a></h2>";
   }
-  else echo "<div class='main'><br>" .
-            "Δεν μπορείτε να αποσυνδεθείτε διότι δεν είστε συνδεδεμένος";
+  else 
+    echo "<h2>Δεν μπορείτε να αποσυνδεθείτε διότι δεν είστε συνδεδεμένος</h2>";
 ?>
 
 <?php require_once 'footer.html' ?>

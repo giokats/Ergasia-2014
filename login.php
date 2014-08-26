@@ -43,9 +43,8 @@
 
   <form method='post' action='login.php'>
     <?=$error?>
-    Username: <input type='text maxlength='16' name='user' value=<?= $user ?> ><br>
-    Password: <input type='password maxlength='16' name='pass' value=<?= $pass ?>><br>
-    <span class='fieldname'>&nbsp;</span>
+    Username: <input type='text' maxlength='16' name='user' value="<?= $user ?>" ><br>
+    Password: <input type='password' maxlength='16' name='pass' value="<?= $pass ?>" ><br>
     <input type='submit' value='Login'>
     </form>
   <br>

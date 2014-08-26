@@ -13,12 +13,12 @@
 
     queryMysql("INSERT INTO posts (title,category,content,date) VALUES('$title', '$category', '$content',now() )");
   
-    echo "<p> Το άρθο καταχωρήθηκε με επιτυχία. " ;
+    echo "<h2> Το άρθο καταχωρήθηκε με επιτυχία. " ;
     echo "<a href='index.php'>Πατήστε εδώ για να επιστρέψετε στην αρχική σελίδα.</a>" ;
-    echo "</p>";
+    echo "</h2>";
   }
   else
-    echo "<p> Το άρθρο δεν μπορεί να καταχωρηθεί </p>";
+    echo "<h2> Το άρθρο δεν μπορεί να καταχωρηθεί </h2>";
 ?>
 
 <?php require_once 'footer.html' ?>
