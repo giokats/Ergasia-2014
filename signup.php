@@ -54,13 +54,13 @@
     $pass = sanitizeString($_POST['pass']);
 
     if ($user == "" || $pass == "")
-      $error = "Not all fields were entered<br><br>";
+      $error = "Συμπληρώστε όλα τα πεδία<br><br>";
     else
     {
       $result = queryMysql("SELECT * FROM members WHERE user='$user'");
 
       if ($result->num_rows)
-        $error = "That username already exists<br><br>";
+        $error = "Διαλέξτε άλλο Username<br><br>";
       else
       {
         queryMysql("INSERT INTO members VALUES('$user', '$pass')");
@@ -73,7 +73,7 @@
 
 ?>
   <form method='post' action='signup.php'> 
-    <?= $error ?>
+    <span class='error'><?= $error ?></span>
     <span class='fieldname'>Username</span>
     <input type='text' maxlength='16' name='user' value= '<?= $user ?>' onBlur='checkUser(this)'><span id='info'></span><br>
     <span class='fieldname'>Password </span>    
