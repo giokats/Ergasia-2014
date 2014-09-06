@@ -16,7 +16,7 @@
 <?php 
     if ($loggedin)
     {
-      echo "<form method='post' action='delete.php?post_id='";
+      echo "<form method='post' action='delete.php?post_id=";
       echo $row['ID'];
       echo "'>";
       echo "<input type='submit' value='Διαγραφή άρθρου'>";
