@@ -5,12 +5,14 @@
   <script>
     function checkUser(user)
     {
+      // Αφαιρούμε τις προηγούμενες τιμές που τυχόν υπάρχουν
       if (user.value == '')
       {
         O('info').innerHTML = ''
         return
       }
 
+      // Ελέγχουμε αν είναι διαθέσιμο το συγκεκριμένο username καλώντας το checkuser.php
       params  = "user=" + user.value
       request = new ajaxRequest()
       request.open("POST", "checkuser.php", true)
@@ -18,6 +20,7 @@
       request.setRequestHeader("Content-length", params.length)
       request.setRequestHeader("Connection", "close")
 
+      // Συμπλήρωση του info
       request.onreadystatechange = function()
       {
         if (this.readyState == 4)
@@ -28,6 +31,8 @@
       request.send(params)
     }
 
+    
+    //Συνάρτηση που χρησιμεύει για να είναι το site compatible με πολλούς explorers
     function ajaxRequest()
     {
       try { var request = new XMLHttpRequest() }

@@ -16,11 +16,20 @@
 <?php 
     if ($loggedin)
     {
+      echo "<span style='float:left;'>";
       echo "<form method='post' action='delete.php?post_id=";
       echo $row['ID'];
       echo "'>";
       echo "<input type='submit' value='Διαγραφή άρθρου'>";
       echo "</form>";
+      echo "</span>";
+      echo "<span style='float:right;'>";
+      echo "<form method='post' action='update.php?post_id=";
+      echo $row['ID'];
+      echo "'>";
+      echo "<input type='submit' value='Ενημέρωση άρθρου'>";
+      echo "</form>";
+      echo "</span>";
     }
 ?>
 

@@ -9,9 +9,9 @@
     $id_title = sanitizeString($_GET['post_id']);
     $query  = "DELETE FROM posts WHERE id='$id_title'";
     $result = queryMysql($query);
-    echo "<p> Το άρθο διαγράφτηκε με επιτυχία. " ;
+    echo "<h2> Το άρθο διαγράφτηκε με επιτυχία. " ;
     echo "<a href='index.php'>Πατήστε εδώ για να επιστρέψετε στην αρχική σελίδα.</a>" ;
-    echo "</p>";
+    echo "</h2>";
   }
   else
     echo "<h2>Το άρθρο δεν μπορεί να διαγραφτεί </h2>";
