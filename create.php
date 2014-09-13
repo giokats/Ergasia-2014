@@ -5,10 +5,23 @@
 
 ?>
 
+  <script type="text/javascript">
+    function Validation(form)
+    {
+      if (O('title').value.length > 0)
+        return confirm('Είστε σίγουρος ότι θέλετε να καταχωρίσετε το άρθρο;');
+      else
+      {
+        alert("Συμπληρώστε τον τίτλο του άρθρου!");
+        return false;
+      }
+    }
+  </script>
+
      <h2>Δημιουργία άρθρου</h2>
 
      <!-- Φόρμα για την δημιουργία άρθρου-->
-     <form method='post' action='import.php'>
+     <form method='post' onsubmit="return Validation(this);" action='import.php'>
         Tίτλος: <input name="title" id="title" type="text"/><br>
 
        Κατηγορία:
