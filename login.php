@@ -45,11 +45,12 @@
     <?=$error?>
     Username: <input type='text' maxlength='16' name='user' value="<?= $user ?>" ><br>
     Password: <input type='password' maxlength='16' name='pass' value="<?= $pass ?>" ><br>
-    <input type='submit' value='Login'>
+    <input type='submit' value='Σύνδεση'>
+    <input type="reset" value="Επαναφορά">
     </form>
   <br>
 
-  <p>Δεν έχεις λογαριασμο;   <a href='signup.php'>Δημιουργία τώρα ...</a></p>
+  <p>Δεν έχεις λογαριασμο;<a href='signup.php'>Δημιουργία τώρα ...</a></p>
 
 
 <?php require_once 'footer.html' ?>
