@@ -13,9 +13,9 @@
 
        Κατηγορία:
         <select name="category" id="category">
-          <option selected="selected" id="general" value="general">Γενικά</option>
-          <option id="economy" value="economy">Οικονομικά</option>
-          <option id="science" value="science">Επιστήμη</option>
+          <option <?php if($post_category == 'general') echo "selected='selected'"; ?> id="general" value="general">Γενικά</option>
+          <option <?php if($post_category == 'economy') echo "selected='selected'"; ?> id="economy" value="economy">Οικονομικά</option>
+          <option <?php if($post_category == 'science') echo "selected='selected'"; ?> id="science" value="science">Επιστήμη</option>
         </select><br>
 
         <TEXTAREA name="content" ROWS="3" COLS="25">
