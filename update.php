@@ -27,6 +27,8 @@
         <?= $row['content'] ?>
         </TEXTAREA>
         <input type='submit' value='Ενημέρωση άρθρου'>
+        <input type="button" name="Ακύρωση" value="Ακύρωση"
+onclick="window.location='post.php?post_id=<?= $id_title ?>'" />
         <input type="hidden" name="post_id" value='<?= $id_title ?>'/>
       </form>
 
