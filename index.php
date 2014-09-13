@@ -3,7 +3,7 @@
   //Για να εμφανιστούν οι 5 τελευταίες σελίδες στην αρχική σελίδα
   if (isset($_GET['post_category'])) $post_category = sanitizeString($_GET['post_category']);
   
-  if (isset($post_category))
+  if (isset($post_category) && !empty($post_category) )
     $query  = "SELECT * FROM posts WHERE category='$post_category' ORDER BY date DESC limit 5";
   else
     $query  = "SELECT * FROM posts ORDER BY date DESC limit 5";
@@ -16,7 +16,7 @@
 <?php 
   if($num>0)
   {
-    if (!isset($post_category))
+    if (!isset($post_category) || empty($post_category) )
     {
       echo "<h2>Καλώς ήλθατε στην σελίδα μας</h2>";
       echo "<p> Τα τελευταία νέα της επικαιρότητας:</p>";
@@ -58,7 +58,8 @@
   {
     echo "<br>" ;
     echo "<br>" ;
-    echo "<form method='post' action='create.php";
+    echo "<form method='post' action='create.php?post_category=";
+    echo $post_category;
     echo "'>";
     echo "<input type='submit' value='Δημιουργία άρθρου'>";
     echo "</form>";

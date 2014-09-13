@@ -1,5 +1,8 @@
 <?php // create.php
-    require_once 'header.php' ;
+  require_once 'header.php' ;
+
+  if (isset($_GET['post_category'])) $post_category = sanitizeString($_GET['post_category']);
+
 ?>
 
      <h2>Δημιουργία άρθρου</h2>
@@ -19,7 +22,8 @@
          Γράψτε εδώ το κείμενο σας...
         </TEXTAREA>
         <input type='submit' value='Δημιουργία άρθρου'>
-
+        <input type="button" name="Ακύρωση" value="Ακύρωση"
+onclick="window.location='index.php?post_category=<?= $post_category ?>'" />
       </form>
 
 <?php require_once 'footer.html' ?>
