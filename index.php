@@ -59,7 +59,7 @@
     echo "<br>" ;
     echo "<br>" ;
     echo "<form method='post' action='create.php?post_category=";
-    echo $post_category;
+    if (isset($post_category)) echo $post_category;
     echo "'>";
     echo "<input type='submit' value='Δημιουργία άρθρου'>";
     echo "</form>";

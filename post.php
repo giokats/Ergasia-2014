@@ -17,7 +17,7 @@
     if ($loggedin)
     {
       echo "<span style='float:left;'>";
-      echo "<form method='post' action='delete.php?post_id=";
+      echo "<form method='post' onsubmit=\"return confirm('Είστε σίγουρος ότι θέλετε να διαγράψετε το άρθρο;');\" action='delete.php?post_id=";
       echo $row['ID'];
       echo "'>";
       echo "<input type='submit' value='Διαγραφή άρθρου'>";
@@ -32,6 +32,8 @@
       echo "</span>";
     }
 ?>
+
+
 
 <?php require_once 'footer.html' ?>
 
